@@ -1,74 +1,102 @@
-@extends('layouts/default')
+
+@extends('layouts.app')
+
 
 @section('page-content')
-    <section class="relative min-h-screen flex items-center">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl sm:text-8xl">Siema <span class="text-pink-500">Eniu</span></h2>
-            <h3 class="text-2xl sm:text-4xl italic">Tu Kadek</h3>
-        </div>
-        
-        <div class="absolute bottom-0 left-0 right-0 p-20">
-            <p class="text-center">Scroll to learn more</p>
-        </div>
-    </section>
 
-    <section class="py-20">
-        <div class="max-w-screen-md mx-auto">
-            <h3 class="text-4xl font-bold mb-6">Introduction</h3>
-            <h4 class="text-xl mb-3 text-gray-200">Short description</h4>
-            <p class="mb-6">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Sed non cumque ipsa consectetur architecto quo labore officia 
-                accusamus tempore natus distinctio laudantium, ratione eius 
-                quibusdam modi, impedit recusandae error. 
-                Velit animi quis eveniet ullam 
-                alias nisi tempora, laborum ratione 
-                praesentium reprehenderit porro laudantium 
-                excepturi sapiente corporis, odio quas. Fugit, architecto.
-            </p>
-            <a href="{{route('about')}}" target="_blank" rel="noopener norefer" class="bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition">Learn More</a>
-        </div>
-    </section>
+<div class="background-image grid grid-cols-1 m-auto">
+    <div class="flex text-gray-100 pt-10">
+        <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
+            <h1 class="sm:text-white text-5xl uppercase font-bold text-shadow-md pb-14">
+                Hejo
+            </h1>
+            <a href="/device" class="text-center bg-gray-50 text-gray-700 py-2 px-4 font-bold text-xl uppercase">
+                Read More
+            </a>
 
-    <section class="py-20">
-        <div class="max-w-screen-md mx-auto">
-            <h3 class="text-4xl font-bold mb-6">What purpose?</h3>
-            <div class="flex flex-wrap -mx-2">
-                <div class="w-full sm:w-1/2 mb-3 px-2">
-                    <div class="p-4 bg-gray-500 h-full rounded-lg">
-                        <h3 class="text-xl font-bold mb-3">Printers</h3>
-                        <p class="text-gray-200 mb-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi libero earum itaque hic labore dolorem, odit porro vitae totam minus?
-                        </p>
-                        <a href="{{url('https://www.youtube.com/channel/UCNZSUwIa4vaWGvgU8BBPssw')}}" target="_blank" rel="noopener norefer" class="bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition">Kanał YT</a>
-                    </div>             
-                </div>
-                <div class="w-full sm:w-1/2 mb-3 px-2">
-                    <div class="p-4 bg-gray-500 h-full rounded-lg">
-                        <h3 class="text-xl font-bold mb-3">Printers Database</h3>
-                        <p class="text-gray-200 mb-3">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quasi libero earum itaque hic labore dolorem, odit porro vitae totam minus?
-                        </p>
-                        <a href="#" target="_blank" rel="noopener norefer" class="bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition">Baza</a>
-                    </div>           
-                </div>
-            </div>
-    </section>
-
-    <section class="py-20">
-        <div class="max-w-screen-md mx-auto">
-            <h3 class="text-4xl font-bold mb-6">Where?</h3>
-            <h3 class="text-xl mb-6">Odwiedź kanał</h3>
-            <div class="-mx-2 sm:flex">
-                <a href="#" target="_blank" rel="noopener norefer" class="bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition mx-2 mb-3">
-                    <span class="mr-2">😁</span><strong>Eniu</strong>
-                </a>
-                <a href="#" target="_blank" rel="noopener norefer" class="bg-pink-500 text-center py-2 px-4 rounded hover:bg-purple-500 transition mx-2 mb-3">
-                    <span class="mr-2">😁</span><strong>Eniu</strong>
-                </a>
-            </div>
         </div>
-    </section>
+    </div>
+</div>
+
+<div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+
+    <div>
+        <img src="https://cdn.pixabay.com/photo/2017/09/28/21/56/print-2797178_960_720.jpg" width="700" alt="">
+    </div>
+
+    <div class="m-auto sm:m-auto text-left w-4/5 block">
+        <h2 class="text-3xl font-extrabold text-gray-600">
+            Cos tam?
+        </h2>
+
+        <p class="py-8 text-gray-500 text-s">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nulla!
+        </p>
+
+        <p class="font-extrabold text-gray-600 text-s pb-9">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi magni sequi natus corporis odio id!
+        </p>
+
+        <a href="/device" class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+            Find Out More
+        </a>
+    </div>
+
+</div>
+
+<div class="text-center p-15 bg-black text-white">
+    <h2 class="text-2xl pb-5 text-l">
+        Cos tam jestem...
+    </h2>
+    <span class="font-extrabold block text-4xl py-1">
+        Jolo
+    </span>
+    <span class="font-extrabold block text-4xl py-1">
+        Jolo2
+    </span>
+    <span class="font-extrabold block text-4xl py-1">
+        Jolo3
+    </span>
+</div>
+
+<div class="text-center py-15">
+    <span class="uppercase text-s text-gray-400">
+        Database
+    </span>
+    <h2 class="text-4xl font-bold py-10">
+        Recent Devices
+    </h2>
+    <p class="m-auto w-4/5 text-gary-500">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cum iusto. 
+        Consequatur officiis tempore enim ipsam molestias explicabo temporibus nulla?
+    </p>
+</div>
+
+<div class="sm:grid grid-cols-2 w-4/5 m-auto">
+    <div class="flex bg-yellow-700 text-gray-100 pt-10">
+
+        <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block">
+            <span class="uppercase text-xs">
+                PHP
+            </span>
+
+            <h3 class="text-xl font-bold py-10">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem a, dolorem, 
+                soluta tempore in aliquid ex mollitia omnis aliquam qui provident illo voluptas.
+            </h3>
+
+            <a href="" class="uppercase bg-transparent border-2 border-gray-100 text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
+                Find Out More
+            </a>
+        </div>
+
+    </div>
+    
+    <div>
+        <img src="https://cdn.pixabay.com/photo/2017/09/28/21/56/print-2797178_960_720.jpg" width="700" alt="">
+    </div>
+
+</div>
+
+
 @endsection
