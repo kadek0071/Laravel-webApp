@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 
-@section('page-content')
+@section('content')
 
 <div class="background-image grid grid-cols-1 m-auto">
     <div class="flex text-gray-100 pt-10">

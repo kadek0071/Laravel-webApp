@@ -1,6 +1,6 @@
-@extends('layouts.default')
+@extends('layouts.app')
 
-@section('page-content')
+@section('content')
     <section class="py-20 min-h-screen flex items-center">
         <div class="max-w-screen-lg mx-auto">
             <h2 class="text-6xl text-center mb-6">About</h2>

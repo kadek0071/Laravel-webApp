@@ -47,8 +47,8 @@
             </div>
         </header>
 
-        <div>
-            @yield('page-content')
+        <div class="min-h-1/2">
+            @yield('content')
         </div>
 
         <div>

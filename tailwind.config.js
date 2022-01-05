@@ -4,7 +4,11 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
-    extend: {}
+    extend: {
+      minHeight: {
+        '1/2': '50vh',
+      }
+    },
   },
   variants: {},
   plugins: [
