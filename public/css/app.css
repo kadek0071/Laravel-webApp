@@ -522,8 +522,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: transparent;
 }
 
-.fixed {
-  position: fixed;
+.absolute {
+  position: absolute;
 }
 
 .right-0 {
@@ -542,6 +542,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.-my-4 {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+.-mx-4 {
+  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .mb-6 {
@@ -574,6 +584,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
 }
 
 .block {
@@ -695,6 +709,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .break-words {
@@ -1135,13 +1153,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-@media (min-width: 1900px) {
-
-    .container {
-      max-width: 1900px;
-    }
-}
-
 .background-image{
     background-image: url('https://cdn.pixabay.com/photo/2015/09/09/20/23/printer-933098_960_720.jpg');
     background-position: center center;
@@ -1175,7 +1186,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .home-dropdown-menu nav ul li {
-    padding: 0.7rem 3rem;
+    padding: 0.6rem 2rem;
     cursor: pointer;
     
 }
@@ -1192,6 +1203,20 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hide {
     transition: .3s;
     transform: translateX(110%);   
+}
+
+@media (min-width: 1900px) {
+
+    .container {
+      max-width: 1900px;
+    }
+}
+
+@media (min-width: 640px) {
+
+    .home-dropdown-menu nav ul li {
+        padding: 0.7rem 3rem;        
+    }
 }
 
 .hover\:bg-purple-500:hover {
@@ -1418,6 +1443,4 @@ Ensure the default browser behavior of the `hidden` attribute.
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
-
-
 
