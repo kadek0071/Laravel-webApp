@@ -381,6 +381,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 *, ::before, ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
   --tw-ring-offset-shadow: 0 0 #0000;
@@ -514,6 +522,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: transparent;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.right-0 {
+  right: 0;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -588,6 +604,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -606,6 +626,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-screen-lg {
   max-width: 1024px;
+}
+
+.transform {
+  transform: var(--tw-transform);
 }
 
 .cursor-pointer {
@@ -899,6 +923,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
+.pt-15 {
+  padding-top: 3.75rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1107,6 +1135,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+@media (min-width: 1900px) {
+
+    .container {
+      max-width: 1900px;
+    }
+}
+
 .background-image{
     background-image: url('https://cdn.pixabay.com/photo/2015/09/09/20/23/printer-933098_960_720.jpg');
     background-position: center center;
@@ -1114,6 +1149,49 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-attachment: fixed;
     background-size: cover;
     height: 500px;
+}
+
+.icon-cog{
+    display: inline-block;
+    width: 1.6rem;
+    fill: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.icon-cog:hover {
+    fill: #38d39f;
+}
+
+.rotate-icon-cog {    
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.home-dropdown-menu nav{
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+    -webkit-clip-path: inset(0px 0px -15px -15px);
+            clip-path: inset(0px 0px -15px -15px);
+}
+
+.home-dropdown-menu nav ul li {
+    padding: 0.7rem 3rem;
+    cursor: pointer;
+    
+}
+
+.home-dropdown-menu nav ul li:hover {
+    background-color: #35455b;
+}
+
+.show {
+    transition: .3s;
+    transform: translateX(0%);
+}
+
+.hide {
+    transition: .3s;
+    transform: translateX(110%);   
 }
 
 .hover\:bg-purple-500:hover {
@@ -1199,6 +1277,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 2rem;
   }
 
+  .sm\:mt-12 {
+    margin-top: 3rem;
+  }
+
   .sm\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -1211,12 +1293,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: 1.5rem;
   }
 
-  .sm\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .sm\:grid {
     display: grid;
+  }
+
+  .sm\:h-6 {
+    height: 1.5rem;
   }
 
   .sm\:w-auto {
@@ -1336,3 +1418,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
+
+
+

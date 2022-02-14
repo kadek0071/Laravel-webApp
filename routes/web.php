@@ -19,9 +19,10 @@ Route::get('/', [PagesController::class, 'index'])->name('main');
 
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 
-Route::resource('/device', PostsController::class);
+Route::resource('/devices', PostsController::class);
 
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
