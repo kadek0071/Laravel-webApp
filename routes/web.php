@@ -15,7 +15,6 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-<<<<<<< HEAD
 Route::get('/', [PagesController::class, 'index'])->name('main');
 
 Route::get('/about', [PagesController::class, 'about'])->name('about');
@@ -27,24 +26,3 @@ Auth::routes();
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-=======
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('/about', function () {
-//     $appname = "Drukarki";
-//     return view('about', [
-//         'appname' => $appname
-//     ]);
-// });
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
->>>>>>> master

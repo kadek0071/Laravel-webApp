@@ -4,12 +4,9 @@
 
 @import "tailwindcss/utilities";
 
-@media (min-width: 1900px) {
 
-    .container {
-      max-width: 1900px;
-    }
-}
+
+
 
 .background-image{
     background-image: url('https://cdn.pixabay.com/photo/2015/09/09/20/23/printer-933098_960_720.jpg');
@@ -43,7 +40,7 @@
 }
 
 .home-dropdown-menu nav ul li {
-    padding: 0.7rem 3rem;
+    padding: 0.6rem 2rem;
     cursor: pointer;
     
 }
@@ -63,3 +60,20 @@
 }
 
 
+
+
+
+
+@media (min-width: 1900px) {
+
+    .container {
+      max-width: 1900px;
+    }
+}
+
+@media (min-width: 640px) {
+
+    .home-dropdown-menu nav ul li {
+        padding: 0.7rem 3rem;        
+    }
+}
