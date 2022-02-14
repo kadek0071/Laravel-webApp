@@ -11,6 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
+<<<<<<< HEAD
 mix
   .js('resources/js/app.js', 'public/js')
   .postCss('resources/css/app.css', 'public/css', [
@@ -24,3 +25,8 @@ if (mix.inProduction()) {
   mix
     .version();
 }
+=======
+mix.js('resources/js/app.js', 'public/js')
+    .vue()
+    .sass('resources/sass/app.scss', 'public/css');
+>>>>>>> master
