@@ -18,7 +18,7 @@
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">
         <header class="bg-gray-800 py-5">
-            <div class="container mx-auto flex justify-between items-center px-5">
+            <div class="flex justify-between items-center px-5">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                         {{ config('app.name', 'Laravel') }}
@@ -55,7 +55,7 @@
         </header>
         @auth
             <div class="home-dropdown-menu absolute overflow-hidden right-0 py-4 px-4 -my-4 -mx-4">
-                <nav class="hide bg-gray-800 text-gray-300 text-center" id="home_dropdown_menu">						
+                <nav class="hide text-gray-300 text-center" id="home_dropdown_menu">						
                     <ul class="text-sm sm:text-base">									
                         <li><a href="/profile">Profil</a></li>
                         <li><a href="/information">Informacje</a></li>

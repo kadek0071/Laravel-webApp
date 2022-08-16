@@ -2073,9 +2073,30 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_0___default());
+/*
+
+    COG HANDLER
+
+*/
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('#icon_cog').on('click', function () {
   home_dropdown_menu();
 });
+
+function home_dropdown_menu() {
+  var home_dropdown_menu = document.getElementById('home_dropdown_menu');
+  var icon_cog = document.getElementById('icon_cog');
+  icon_cog.classList.toggle("rotate-icon-cog");
+
+  if (home_dropdown_menu.classList.contains("hide")) {
+    home_dropdown_menu.classList.remove('hide');
+    home_dropdown_menu.classList.add('show');
+  } else {
+    home_dropdown_menu.classList.remove('show');
+    home_dropdown_menu.classList.add('hide');
+  }
+}
+
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", function (evt) {
   var home_dropdown_menu = document.getElementById('home_dropdown_menu');
   var icon_cog = document.getElementById('icon_cog');
@@ -2095,20 +2116,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", function (ev
     home_dropdown_menu.classList.add('hide');
   }
 });
-
-function home_dropdown_menu() {
-  var home_dropdown_menu = document.getElementById('home_dropdown_menu');
-  var icon_cog = document.getElementById('icon_cog');
-  icon_cog.classList.toggle("rotate-icon-cog");
-
-  if (home_dropdown_menu.classList.contains("hide")) {
-    home_dropdown_menu.classList.remove('hide');
-    home_dropdown_menu.classList.add('show');
-  } else {
-    home_dropdown_menu.classList.remove('show');
-    home_dropdown_menu.classList.add('hide');
-  }
-}
 
 /***/ }),
 
@@ -30656,7 +30663,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","C:\\\\xampp\\\\htdocs\\\
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunktest"] = self["webpackChunktest"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
