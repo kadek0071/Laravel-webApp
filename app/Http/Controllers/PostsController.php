@@ -21,8 +21,12 @@ class PostsController extends Controller
     public function index()
     {
 
-        return view('devices.index')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+        $posts = Post::orderBy('updated_at', 'DESC')->get();
+
+        return view('devices.index', [
+            'posts' => $posts
+        ]);
+
     }
 
     /**
@@ -43,7 +47,26 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'description' => 'required',
+            'title' => 'required', //dodaj tytul do formularza jeszcze Konrad      
+        ]);
+
+        if(!$request->has('slug') && $request->has('title')) {
+            $slug = strtolower($request->input('title'));
+        }else if(!$request->has('slug') && !$request->has('title')){
+            $slug = null;
+        }else{
+            $slug = $request->input('slug');
+        }
+
+        $request->user()->posts()->create([
+            //user_id automatically
+            'description' => $request->description,
+            'slug' => $slug,
+        ]);
+
+        return back();
     }
 
     /**

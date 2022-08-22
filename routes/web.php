@@ -23,6 +23,7 @@ Route::get('/about', [PagesController::class, 'about'])->name('about');
 
 Route::get('/devices', [PostsController::class, 'index'])->name('posts');
 Route::get('/devices/create', [PostsController::class, 'create'])->name('postCreate');
+Route::post('/devices/create', [PostsController::class, 'store']);
 
 Auth::routes();
 

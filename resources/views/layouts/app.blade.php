@@ -54,7 +54,7 @@
             </div>
         </header>
         @auth
-            <div class="home-dropdown-menu absolute overflow-hidden right-0 py-4 px-4 -my-4 -mx-4">
+            <div class="home-dropdown-menu absolute overflow-hidden right-0 pl-4 pb-4">
                 <nav class="hide text-gray-300 text-center" id="home_dropdown_menu">						
                     <ul class="text-sm sm:text-base">									
                         <li><a href="/profile">Profil</a></li>
