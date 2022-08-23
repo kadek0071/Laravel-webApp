@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Post;
+
+
 
 class PostsController extends Controller
 {
@@ -52,11 +55,9 @@ class PostsController extends Controller
             'title' => 'required', //dodaj tytul do formularza jeszcze Konrad      
         ]);
 
-        if(!$request->has('slug') && $request->has('title')) {
-            $slug = strtolower($request->input('title'));
-        }else if(!$request->has('slug') && !$request->has('title')){
-            $slug = null;
-        }else{
+        if(!$request->filled('slug') && $request->filled('description')) {
+            $slug = Str::slug($request->input('description'));
+        }else if($request->filled('slug')){
             $slug = $request->input('slug');
         }
 
