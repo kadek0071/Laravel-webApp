@@ -24,7 +24,7 @@ class PostsController extends Controller
     public function index()
     {
 
-        $posts = Post::orderBy('updated_at', 'DESC')->get();
+        $posts = Post::orderBy('updated_at', 'DESC')->paginate(5);
 
         return view('devices.index', [
             'posts' => $posts
@@ -55,10 +55,10 @@ class PostsController extends Controller
             'title' => 'required', //dodaj tytul do formularza jeszcze Konrad      
         ]);
 
-        if(!$request->filled('slug') && $request->filled('description')) {
-            $slug = Str::slug($request->input('description'));
+        if(!$request->filled('slug') && $request->filled('title')) {
+            $slug = Str::slug($request->input('title'));
         }else if($request->filled('slug')){
-            $slug = $request->input('slug');
+            $slug = Str::slug($request->input('slug'));
         }
 
         $request->user()->posts()->create([

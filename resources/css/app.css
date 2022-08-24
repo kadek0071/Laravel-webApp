@@ -17,6 +17,12 @@
     height: 500px;
 }
 
+/*
+
+    COG STYLING
+
+*/
+
 .icon-cog{
     display: inline-block;
     width: 1.8rem;
@@ -61,8 +67,22 @@
 }
 
 
+/*
+
+    DEVICE FORM
+
+*/
+
+.device-form{
+    
+}
 
 
+/*
+
+    MEDIA
+
+*/
 
 @media (min-width: 1900px) {
 

@@ -16,7 +16,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div id="app">
+    <div id="app" class="flex flex-col min-h-screen justify-between">
         <header class="bg-gray-800 py-5">
             <div class="flex justify-between items-center px-5">
                 <div>
@@ -64,7 +64,7 @@
                 </nav>
             </div>
         @endauth
-        <div class="min-h-1/2">
+        <div class="flex flex-col justify-center items-center w-full min-h-2/3 bg-gray-100">
             @yield('content')
         </div>
 

@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="flex justify-center">
-    <div class="w-8/12 bg-white p-6 rounded-lg">
+<div class="py-10 w-8/12">
+    <div class="device-form bg-gray-800 px-6 py-10 rounded-lg">
         <form action="{{route('postCreate')}}" method="post" class="mb-4">
             {{ csrf_field() }}
             <div class="mb-4">
