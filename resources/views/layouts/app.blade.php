@@ -54,6 +54,7 @@
             </div>
         </header>
         @auth
+        <div class="relative">
             <div class="home-dropdown-menu absolute overflow-hidden right-0 pl-4 pb-4">
                 <nav class="hide text-gray-300 text-center" id="home_dropdown_menu">						
                     <ul class="text-sm sm:text-base">									
@@ -63,6 +64,7 @@
                     </ul>							
                 </nav>
             </div>
+        </div>
         @endauth
         <div class="flex flex-col justify-center items-center w-full min-h-2/3 bg-gray-100">
             @yield('content')
