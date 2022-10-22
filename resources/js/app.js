@@ -8,9 +8,33 @@ require('./bootstrap');
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 
+
+/*
+
+    COG HANDLER
+
+*/
+
+
 $('#icon_cog').on('click', function(){
     home_dropdown_menu();
 });
+
+function home_dropdown_menu(){
+
+    const home_dropdown_menu = document.getElementById('home_dropdown_menu');
+    const icon_cog = document.getElementById('icon_cog');
+
+    icon_cog.classList.toggle("rotate-icon-cog");
+
+    if(home_dropdown_menu.classList.contains("hide")){
+        home_dropdown_menu.classList.remove('hide');         
+        home_dropdown_menu.classList.add('show');
+    } else{
+        home_dropdown_menu.classList.remove('show'); 
+        home_dropdown_menu.classList.add('hide');             
+    } 
+}
 
 $(document).on("click", (evt) => {
 
@@ -33,19 +57,5 @@ $(document).on("click", (evt) => {
     }
 });
 
-function home_dropdown_menu(){
 
-    const home_dropdown_menu = document.getElementById('home_dropdown_menu');
-    const icon_cog = document.getElementById('icon_cog');
-
-    icon_cog.classList.toggle("rotate-icon-cog");
-
-    if(home_dropdown_menu.classList.contains("hide")){
-        home_dropdown_menu.classList.remove('hide');         
-        home_dropdown_menu.classList.add('show');
-    } else{
-        home_dropdown_menu.classList.remove('show'); 
-        home_dropdown_menu.classList.add('hide');             
-    } 
-}
 

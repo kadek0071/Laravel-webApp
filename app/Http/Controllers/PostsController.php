@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Models\Post;
+
+
 
 class PostsController extends Controller
 {
@@ -21,8 +24,12 @@ class PostsController extends Controller
     public function index()
     {
 
-        return view('devices.index')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+        $posts = Post::orderBy('updated_at', 'DESC')->paginate(5);
+
+        return view('devices.index', [
+            'posts' => $posts
+        ]);
+
     }
 
     /**
@@ -32,7 +39,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('devices.create');
     }
 
     /**
@@ -43,7 +50,24 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'description' => 'required',
+            'title' => 'required', //dodaj tytul do formularza jeszcze Konrad      
+        ]);
+
+        if(!$request->filled('slug') && $request->filled('title')) {
+            $slug = Str::slug($request->input('title'));
+        }else if($request->filled('slug')){
+            $slug = Str::slug($request->input('slug'));
+        }
+
+        $request->user()->posts()->create([
+            //user_id automatically
+            'description' => $request->description,
+            'slug' => $slug,
+        ]);
+
+        return back();
     }
 
     /**

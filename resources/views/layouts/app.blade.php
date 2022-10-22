@@ -16,9 +16,9 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div id="app">
+    <div id="app" class="flex flex-col min-h-screen justify-between">
         <header class="bg-gray-800 py-5">
-            <div class="container mx-auto flex justify-between items-center px-5">
+            <div class="flex justify-between items-center px-5">
                 <div>
                     <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
                         {{ config('app.name', 'Laravel') }}
@@ -54,8 +54,9 @@
             </div>
         </header>
         @auth
-            <div class="home-dropdown-menu absolute overflow-hidden right-0 py-4 px-4 -my-4 -mx-4">
-                <nav class="hide bg-gray-800 text-gray-300 text-center" id="home_dropdown_menu">						
+        <div class="relative">
+            <div class="home-dropdown-menu absolute overflow-hidden right-0 pl-4 pb-4">
+                <nav class="hide text-gray-300 text-center" id="home_dropdown_menu">						
                     <ul class="text-sm sm:text-base">									
                         <li><a href="/profile">Profil</a></li>
                         <li><a href="/information">Informacje</a></li>
@@ -63,8 +64,9 @@
                     </ul>							
                 </nav>
             </div>
+        </div>
         @endauth
-        <div class="min-h-1/2">
+        <div class="flex flex-col justify-center items-center w-full min-h-2/3 bg-gray-100">
             @yield('content')
         </div>
 

@@ -17,9 +17,15 @@
     height: 500px;
 }
 
+/*
+
+    COG STYLING
+
+*/
+
 .icon-cog{
     display: inline-block;
-    width: 1.6rem;
+    width: 1.8rem;
     fill: #fff;
     transition: .3s;
     cursor: pointer;
@@ -34,15 +40,23 @@
     transform-origin: center;
 }
 
+
 .home-dropdown-menu nav{
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
     clip-path: inset(0px 0px -15px -15px);
+    background-color: rgb(47, 61, 79);
 }
 
 .home-dropdown-menu nav ul li {
+    padding: 0;
+    cursor: pointer;   
+}
+
+.home-dropdown-menu nav ul li a{
+    display: block; 
+    width: 100%; 
+    height: 100%;  
     padding: 0.6rem 2rem;
-    cursor: pointer;
-    
 }
 
 .home-dropdown-menu nav ul li:hover {
@@ -60,9 +74,22 @@
 }
 
 
+/*
+
+    DEVICE FORM
+
+*/
+
+.device-form{
+    
+}
 
 
+/*
 
+    MEDIA
+
+*/
 
 @media (min-width: 1900px) {
 
@@ -73,7 +100,7 @@
 
 @media (min-width: 640px) {
 
-    .home-dropdown-menu nav ul li {
-        padding: 0.7rem 3rem;        
+    .home-dropdown-menu nav ul li a{
+        padding: 0.7rem 3rem;
     }
 }
